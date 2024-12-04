@@ -19,6 +19,7 @@
             text-align: center;
             padding: 40px 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         header h1 {
             margin: 0;
@@ -28,6 +29,13 @@
         header p {
             font-size: 1.3em;
             margin-top: 10px;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
         }
         nav {
             background-color: #ff6f61; /* Персиковый цвет */
@@ -138,6 +146,7 @@
 <body>
 
 <header>
+    <img src="https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/images/logo.png" alt="TopRenovierung Logo" class="logo">
     <h1>TopRenovierung Kaufbeuren</h1>
     <p>Ihre Experten für Wohnungsrenovierung in Kaufbeuren</p>
 </header>
@@ -175,16 +184,10 @@
     <h2>Galerie</h2>
     <div class="gallery">
         <div class="gallery-item">
-            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 1">
+            <img src="https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/images/wooden-parquet-living-room.png" alt="Living room with wooden parquet">
         </div>
         <div class="gallery-item">
-            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 2">
-        </div>
-        <div class="gallery-item">
-            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 3">
-        </div>
-        <div class="gallery-item">
-            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 4">
+            <img src="https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/images/workers-in-uniform.png" alt="Workers in uniform">
         </div>
     </div>
 </section>
@@ -215,4 +218,19 @@
             <option value="Innenrenovierung">Innenrenovierung</option>
             <option value="Badsanierung">Badsanierung</option>
             <option value="Wandmalerei">Wandmalerei</option>
-            <option
+            <option value="Elektrische Installationen">Elektrische Installationen</option>
+        </select>
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Absenden</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2024 TopRenovierung Kaufbeuren. Alle Rechte vorbehalten.</p>
+</footer>
+
+</body>
+</html>
