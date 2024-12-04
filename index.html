@@ -9,15 +9,23 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f7f7f7;
         }
         header {
-            background: #2c3e50;
+            background-color: #7bed9f; /* Мятный цвет */
             color: white;
             text-align: center;
             padding: 20px 0;
         }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
         nav {
-            background: #34495e;
+            background-color: #ff6f61; /* Персиковый цвет */
             display: flex;
             justify-content: center;
             padding: 10px 0;
@@ -42,11 +50,23 @@
             width: 48%;
             margin-bottom: 20px;
             padding: 10px;
-            background: #ecf0f1;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
             border-radius: 8px;
         }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
         footer {
-            background: #2c3e50;
+            background-color: #7bed9f; /* Мятный цвет */
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -63,13 +83,13 @@
             border-radius: 5px;
         }
         button {
-            background-color: #3498db;
+            background-color: #ff6f61; /* Персиковый цвет */
             color: white;
             border: none;
             cursor: pointer;
         }
         button:hover {
-            background-color: #2980b9;
+            background-color: #e65c4a;
         }
     </style>
 </head>
@@ -81,4 +101,70 @@
 </header>
 
 <nav>
-    <a href="#services">Le
+    <a href="#services">Leistungen</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="services">
+    <h2>Unsere Dienstleistungen</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Innenrenovierung</h3>
+            <p>Verleihen Sie Ihrem Zuhause neuen Glanz mit unseren professionellen Innenrenovierungen.</p>
+        </div>
+        <div class="service">
+            <h3>Sanierung von Badezimmern</h3>
+            <p>Erwecken Sie Ihr Badezimmer zu neuem Leben mit unserer maßgeschneiderten Sanierungslösungen.</p>
+        </div>
+        <div class="service">
+            <h3>Wand- und Deckenmalerei</h3>
+            <p>Verleihen Sie Ihrem Raum Farbe und Frische durch hochwertige Malerarbeiten.</p>
+        </div>
+        <div class="service">
+            <h3>Elektrische Installationen</h3>
+            <p>Unsere Experten bieten moderne und sichere elektrische Installationen für Ihr Zuhause.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Galerie</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 3">
+        </div>
+        <div class="gallery-item">
+            <img src="https://cdn.openai.com/dall-e-2/images/generations/50OSCEGjrqbSE4fe.png" alt="Renovierung 4">
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="form-container">
+    <h2>Kontaktieren Sie uns</h2>
+    <form action="https://formspree.io/f/xayjlzov" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Absenden</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 TopRenovierung Kaufbeuren. Alle Rechte vorbehalten.</p>
+</footer>
+
+</body>
+</html>
