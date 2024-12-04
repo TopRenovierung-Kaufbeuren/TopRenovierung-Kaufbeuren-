@@ -14,7 +14,7 @@
             box-sizing: border-box;
         }
         header {
-            background-color: #7bed9f; /* Мятный цвет */
+            background-color: #ff8f6d; /* Мягкий персиковый */
             color: white;
             text-align: center;
             padding: 40px 0;
@@ -37,26 +37,52 @@
             width: 100px;
             height: auto;
         }
+
+        /* Навигация */
         nav {
-            background-color: #ff6f61; /* Персиковый цвет */
+            background-color: #ff8f6d; /* Мягкий персиковый */
+            padding: 15px;
             display: flex;
-            justify-content: center;
-            padding: 15px 0;
+            justify-content: space-between;
+            align-items: center;
         }
         nav a {
             color: white;
-            margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-            transition: background-color 0.3s ease-in-out;
+            margin: 0 20px;
         }
         nav a:hover {
-            background-color: #e65c4a;
-            padding: 10px;
-            border-radius: 5px;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Для мобильных устройств */
+        @media (max-width: 768px) {
+            nav a {
+                display: none;
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            nav a.active {
+                display: block;
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 30px;
+            }
+
+            nav {
+                flex-direction: column;
+            }
         }
 
         /* Секция с услугами */
@@ -71,13 +97,13 @@
             justify-content: space-between;
         }
         .service, .gallery-item {
-            width: 48%;
-            margin-bottom: 20px;
+            width: 100%;
             padding: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
         }
         .service:hover, .gallery-item:hover {
             transform: translateY(-10px);
@@ -97,7 +123,7 @@
             margin-top: 40px;
         }
         footer {
-            background-color: #7bed9f; /* Мятный цвет */
+            background-color: #ff8f6d; /* Мягкий персиковый */
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -124,6 +150,7 @@
         button:hover {
             background-color: #e65c4a;
         }
+
         /* Отзывы */
         .testimonials {
             background-color: #f7f7f7;
@@ -152,10 +179,11 @@
 </header>
 
 <nav>
-    <a href="#services">Leistungen</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#contact">Kontakt</a>
-    <a href="#testimonials">Kundenbewertungen</a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <a href="#services" class="nav-link">Leistungen</a>
+    <a href="#gallery" class="nav-link">Galerie</a>
+    <a href="#contact" class="nav-link">Kontakt</a>
+    <a href="#testimonials" class="nav-link">Kundenbewertungen</a>
 </nav>
 
 <section id="services">
@@ -214,23 +242,3 @@
         <input type="email" id="email" name="email" required>
 
         <label for="service">Wählen Sie die gewünschte Dienstleistung:</label>
-        <select id="service" name="service" required>
-            <option value="Innenrenovierung">Innenrenovierung</option>
-            <option value="Badsanierung">Badsanierung</option>
-            <option value="Wandmalerei">Wandmalerei</option>
-            <option value="Elektrische Installationen">Elektrische Installationen</option>
-        </select>
-
-        <label for="message">Nachricht:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Absenden</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2024 TopRenovierung Kaufbeuren. Alle Rechte vorbehalten.</p>
-</footer>
-
-</body>
-</html>
