@@ -22,6 +22,7 @@
             text-align: center;
             padding: 40px 20px;
             position: relative;
+            z-index: 1; /* Положение поверх фона */
         }
         header h1 {
             margin: 0;
@@ -115,6 +116,16 @@
         .testimonial-item h4 {
             margin-top: 10px;
             font-weight: bold;
+        }
+
+        /* Логотип как фон с уменьшенной яркостью */
+        body {
+            background-image: url("https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            filter: brightness(40%); /* Уменьшаем яркость фона */
         }
 
     </style>
