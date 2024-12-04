@@ -12,17 +12,16 @@
             padding: 0;
             background-color: #e0f8e4; /* Мятный фон */
             box-sizing: border-box;
+            background-image: url("https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp");
+            background-size: cover;
+            background-position: center;
+            color: #333;
         }
         header {
-            background-color: #ff8f6d; /* Мягкий персиковый */
             color: white;
             text-align: center;
             padding: 40px 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
         header h1 {
             margin: 0;
@@ -33,42 +32,22 @@
             font-size: 1.2em;
             margin-top: 10px;
         }
-        .logo {
-            width: 80px;
-            height: auto;
-            background-color: transparent;
-        }
 
         /* Контакты в шапке */
         .header-contact {
             font-size: 1.1em;
+            color: #ff6347; /* Яркий цвет */
         }
         .header-contact a {
-            color: white;
+            color: #ff6347;
             text-decoration: none;
             margin-left: 20px;
         }
         .header-contact a:hover {
             text-decoration: underline;
         }
-
-        /* Навигация */
-        nav {
-            background-color: #ff8f6d; /* Мягкий персиковый */
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 20px;
-        }
-        nav a:hover {
-            color: #fff;
-            text-decoration: underline;
+        .header-contact p {
+            margin: 0;
         }
 
         /* Секции с контентом */
@@ -77,24 +56,23 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .service {
-            background: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .service:hover {
-            transform: translateY(-10px);
+            text-align: center;
+            color: black;
+            font-size: 1.2em;
         }
         .service h3 {
             margin-top: 0;
         }
+
         .gallery-item img {
             width: 100%;
             height: auto;
@@ -144,25 +122,17 @@
 <body>
 
 <header>
-    <img src="https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp" alt="TopRenovierung Logo" class="logo">
     <div>
         <h1>TopRenovierung Kaufbeuren</h1>
         <p>Ihre Experten für Wohnungsrenovierung in Kaufbeuren</p>
     </div>
     <div class="header-contact">
-        <a href="https://t.me/TopRenovierung-Kaufbeuren" target="_blank">Telegram</a>
-        <a href="mailto:TopRenovierung-Kaufbeuren@gmx.de">Email</a>
+        <p>Telegram: <a href="https://t.me/TopRenovierung-Kaufbeuren" target="_blank">TopRenovierung-Kaufbeuren</a></p>
+        <p>Email: TopRenovierung-Kaufbeuren@gmx.de</p>
     </div>
 </header>
 
-<nav>
-    <a href="javascript:void(0)" onclick="showSection('services')">Leistungen</a>
-    <a href="javascript:void(0)" onclick="showSection('gallery')">Galerie</a>
-    <a href="javascript:void(0)" onclick="showSection('testimonials')">Kundenbewertungen</a>
-    <a href="javascript:void(0)" onclick="showSection('contact')">Kontakt</a>
-</nav>
-
-<section id="services" class="active">
+<section id="services">
     <h2>Unsere Dienstleistungen</h2>
     <div class="services">
         <div class="service">
@@ -202,8 +172,8 @@
             </div>
         </div>
         <div class="service">
-            <h3>Uberholung nach dem Renovieren</h3>
-            <p>Nach dem Renovierungsprozess kümmern wir uns um die чистоту и порядок в вашем доме.</p>
+            <h3>Überholung nach dem Renovieren</h3>
+            <p>Nach dem Renovierungsprozess kümmern wir uns um die Reinigung und den Zustand Ihres Hauses.</p>
             <div class="gallery">
                 <img src="https://example.com/cleanup1.jpg" alt="Cleanup 1">
                 <img src="https://example.com/cleanup2.jpg" alt="Cleanup 2">
@@ -213,8 +183,14 @@
     </div>
 </section>
 
-<section id="gallery">
-    <h2>Galerie</h2>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-RFb1r8U6gLWYvEfpy29gp9.webp" alt="
+<section id="contact" class="contact-info">
+    <h2>Kontaktieren Sie uns</h2>
+    <p>Sie können uns per E-Mail erreichen: <a href="mailto:TopRenovierung-Kaufbeuren@gmx.de">TopRenovierung-Kaufbeuren@gmx.de</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 TopRenovierung Kaufbeuren</p>
+</footer>
+
+</body>
+</html>
