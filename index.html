@@ -15,7 +15,10 @@
             background-image: url("https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp");
             background-size: cover;
             background-position: center;
-            color: #333;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            filter: brightness(10%); /* Сделано логотипом более прозрачным */
+            color: white; /* Белый цвет текста */
         }
         header {
             color: white;
@@ -37,7 +40,7 @@
         /* Контакты в шапке */
         .header-contact {
             font-size: 1.1em;
-            color: #ff6347; /* Яркий цвет */
+            color: #ff6347; /* Яркий цвет для контактов */
         }
         .header-contact a {
             color: #ff6347;
@@ -67,7 +70,7 @@
         .service {
             padding: 20px;
             text-align: center;
-            color: black;
+            color: white; /* Белый текст для услуг */
             font-size: 1.2em;
         }
         .service h3 {
@@ -83,10 +86,10 @@
         /* Контакт */
         .contact-info {
             font-size: 1.2em;
-            color: #333;
+            color: white; /* Белый текст для контактов */
             text-align: center;
             padding: 20px;
-            background: #fff;
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контактов */
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 40px;
@@ -117,17 +120,6 @@
             margin-top: 10px;
             font-weight: bold;
         }
-
-        /* Логотип как фон с уменьшенной яркостью */
-        body {
-            background-image: url("https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            filter: brightness(40%); /* Уменьшаем яркость фона */
-        }
-
     </style>
 </head>
 <body>
