@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #e0f8e4; /* Мятный фон */
             box-sizing: border-box;
         }
         header {
@@ -45,6 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         nav a {
             color: white;
@@ -60,6 +61,7 @@
         .menu-icon {
             display: none;
             cursor: pointer;
+            font-size: 30px;
         }
 
         /* Для мобильных устройств */
@@ -78,6 +80,9 @@
             .menu-icon {
                 display: block;
                 font-size: 30px;
+                position: absolute;
+                right: 20px;
+                top: 20px;
             }
 
             nav {
@@ -85,11 +90,15 @@
             }
         }
 
-        /* Секция с услугами */
+        /* Секции с контентом */
         section {
             padding: 50px 20px;
             max-width: 1000px;
             margin: 0 auto;
+            display: none; /* Скрыть все секции по умолчанию */
+        }
+        section.active {
+            display: block; /* Показать активную секцию */
         }
         .services, .gallery {
             display: flex;
@@ -114,41 +123,24 @@
             border-radius: 8px;
         }
 
-        /* Контактная форма */
-        .form-container {
-            background-color: #ffffff;
+        /* Контакт */
+        .contact-info {
+            font-size: 1.2em;
+            color: #333;
+            text-align: center;
             padding: 20px;
+            background: #fff;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 40px;
         }
+
         footer {
             background-color: #ff8f6d; /* Мягкий персиковый */
             color: white;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea, select, button {
-            margin-bottom: 15px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        button {
-            background-color: #ff6f61; /* Персиковый цвет */
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-        button:hover {
-            background-color: #e65c4a;
         }
 
         /* Отзывы */
@@ -181,13 +173,13 @@
 
 <nav>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <a href="#services" class="nav-link">Leistungen</a>
-    <a href="#gallery" class="nav-link">Galerie</a>
-    <a href="#contact" class="nav-link">Kontakt</a>
-    <a href="#testimonials" class="nav-link">Kundenbewertungen</a>
+    <a href="javascript:void(0)" class="nav-link" onclick="showSection('services')">Leistungen</a>
+    <a href="javascript:void(0)" class="nav-link" onclick="showSection('gallery')">Galerie</a>
+    <a href="javascript:void(0)" class="nav-link" onclick="showSection('testimonials')">Kundenbewertungen</a>
+    <a href="javascript:void(0)" class="nav-link" onclick="showSection('contact')">Kontakt</a>
 </nav>
 
-<section id="services">
+<section id="services" class="active">
     <h2>Unsere Dienstleistungen</h2>
     <div class="services">
         <div class="service">
@@ -223,7 +215,6 @@
 
 <section id="testimonials" class="testimonials">
     <h2>Was unsere Kunden sagen</h2>
-    <!-- Добавим больше отзывов -->
     <div class="testimonial-item">
         <p>"TopRenovierung Kaufbeuren hat unser Badezimmer perfekt renoviert. Der Service war erstklassig, und das Ergebnis übertraf unsere Erwartungen!"</p>
         <h4>– Claudia M., Kaufbeuren</h4>
@@ -236,9 +227,12 @@
         <p>"Ich bin sehr zufrieden mit der Renovierung meines Hauses. Sehr effizient und detailorientiert."</p>
         <h4>– Petra L., Kaufbeuren</h4>
     </div>
-    <div class="testimonial-item">
-        <p>"Wirklich tolles Team! Der gesamte Umbau war schnell und ohne Probleme." </p>
-        <h4>– Jürgen F., Kaufbeuren</h4>
-    </div>
-    <div class="testimonial-item">
-        <p>"Sehr zufrieden mit der Renovierung
+</section>
+
+<section id="contact" class="contact-info">
+    <h2>Kontaktieren Sie uns</h2>
+    <p>Sie können uns per E-Mail erreichen: <a href="mailto:info@toprenovierung.de">info@toprenovierung.de</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 TopRen
