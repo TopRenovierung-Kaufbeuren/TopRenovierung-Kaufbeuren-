@@ -5,39 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TopRenovierung Kaufbeuren</title>
     <style>
+        /* Основной стиль */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f7f7;
+            box-sizing: border-box;
         }
         header {
             background-color: #7bed9f; /* Мятный цвет */
             color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: bold;
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1.3em;
+            margin-top: 10px;
         }
         nav {
             background-color: #ff6f61; /* Персиковый цвет */
             display: flex;
             justify-content: center;
-            padding: 10px 0;
+            padding: 15px 0;
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
         }
+        nav a:hover {
+            background-color: #e65c4a;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Секция с услугами */
         section {
-            padding: 20px;
+            padding: 50px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
@@ -49,21 +65,28 @@
         .service, .gallery-item {
             width: 48%;
             margin-bottom: 20px;
-            padding: 10px;
+            padding: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .service:hover, .gallery-item:hover {
+            transform: translateY(-10px);
         }
         .gallery-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
+
+        /* Контактная форма */
         .form-container {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
         }
         footer {
             background-color: #7bed9f; /* Мятный цвет */
@@ -76,20 +99,39 @@
             display: flex;
             flex-direction: column;
         }
-        input, textarea, button {
-            margin-bottom: 10px;
-            padding: 10px;
+        input, textarea, select, button {
+            margin-bottom: 15px;
+            padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1em;
         }
         button {
             background-color: #ff6f61; /* Персиковый цвет */
             color: white;
             border: none;
             cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
         }
         button:hover {
             background-color: #e65c4a;
+        }
+        /* Отзывы */
+        .testimonials {
+            background-color: #f7f7f7;
+            padding: 40px 20px;
+        }
+        .testimonial-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .testimonial-item p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        .testimonial-item h4 {
+            margin-top: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -104,6 +146,7 @@
     <a href="#services">Leistungen</a>
     <a href="#gallery">Galerie</a>
     <a href="#contact">Kontakt</a>
+    <a href="#testimonials">Kundenbewertungen</a>
 </nav>
 
 <section id="services">
@@ -146,6 +189,18 @@
     </div>
 </section>
 
+<section id="testimonials" class="testimonials">
+    <h2>Was unsere Kunden sagen</h2>
+    <div class="testimonial-item">
+        <p>"TopRenovierung Kaufbeuren hat unser Badezimmer perfekt renoviert. Der Service war erstklassig, und das Ergebnis übertraf unsere Erwartungen!"</p>
+        <h4>– Claudia M., Kaufbeuren</h4>
+    </div>
+    <div class="testimonial-item">
+        <p>"Das Team war sehr professionell und freundlich. Wir sind begeistert von der Qualität der Innenrenovierung!"</p>
+        <h4>– Markus T., Kaufbeuren</h4>
+    </div>
+</section>
+
 <section id="contact" class="form-container">
     <h2>Kontaktieren Sie uns</h2>
     <form action="https://formspree.io/f/xayjlzov" method="POST">
@@ -155,16 +210,9 @@
         <label for="email">E-Mail:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="message">Nachricht:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Absenden</button>
-    </form>
-</section>
-
-<footer>
-    <p>&copy; 2024 TopRenovierung Kaufbeuren. Alle Rechte vorbehalten.</p>
-</footer>
-
-</body>
-</html>
+        <label for="service">Wählen Sie die gewünschte Dienstleistung:</label>
+        <select id="service" name="service" required>
+            <option value="Innenrenovierung">Innenrenovierung</option>
+            <option value="Badsanierung">Badsanierung</option>
+            <option value="Wandmalerei">Wandmalerei</option>
+            <option
