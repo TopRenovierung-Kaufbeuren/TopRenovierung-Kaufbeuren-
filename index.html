@@ -1,273 +1,85 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TopRenovierung Kaufbeuren</title>
-    <style>
-        /* Основной стиль */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0f8e4; /* Мятный фон */
-            box-sizing: border-box;
-            background-image: url("https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Статичный фон */
-            filter: brightness(10%); /* Сделано логотипом более прозрачным */
-            color: white; /* Белый цвет текста */
-        }
-
-        /* Навигация по сайту */
-        nav {
-            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin: 0 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Шапка */
-        header {
-            text-align: center;
-            padding: 120px 20px; /* Отступ для шапки */
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: white; /* Ярко белый текст для названия фирмы */
-        }
-
-        header p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            color: white; /* Ярко белый текст для описания */
-        }
-
-        /* Контакты */
-        .header-contact {
-            font-size: 1.2em;
-            color: #ff6347; /* Яркий цвет для контактов */
-            margin-top: 20px;
-        }
-
-        .header-contact a {
-            color: #ff6347;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .header-contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Секции с контентом */
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 30px;
-            color: white; /* Белый текст заголовков */
-        }
-
-        /* Услуги */
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .service {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для услуг */
-            border-radius: 8px;
-            text-align: center;
-            color: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .service:hover {
-            transform: translateY(-10px);
-        }
-
-        .service h3 {
-            margin-top: 0;
-            font-size: 1.8em;
-        }
-
-        /* Галерея */
-        .gallery {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Контакт */
-        .contact-info {
-            font-size: 1.2em;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-        }
-
-        footer {
-            background-color: #ff8f6d;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-
-        /* Отзывы */
-        .testimonials {
-            background-color: #f7f7f7;
-            padding: 40px 20px;
-        }
-
-        .testimonial-item {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .testimonial-item p {
-            font-size: 1.2em;
-            font-style: italic;
-        }
-
-        .testimonial-item h4 {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* Масштабируемая навигация */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            .service {
-                padding: 15px;
-                font-size: 1.1em;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1.2em;
-            }
-        }
-
-    </style>
+    <meta name="description" content="Ремонт квартир под ключ. Профессиональные услуги ремонта и отделки.">
+    <title>Фирма по ремонту квартир</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Ремонт квартир под ключ</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Навигация -->
-<nav>
-    <a href="#services">Leistungen</a>
-    <a href="#gallery">Galerie</a>
-    <a href="#testimonials">Kundenbewertungen</a>
-    <a href="#contact">Kontakt</a>
-</nav>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Качественный ремонт квартир с гарантией</h2>
+            <p>Наши специалисты помогут вам создать идеальное пространство для жизни!</p>
+        </div>
+    </section>
 
-<!-- Шапка сайта -->
-<header>
-    <h1>TopRenovierung Kaufbeuren</h1>
-    <p>Ihre Experten für Wohnungsrenovierung in Kaufbeuren</p>
-    <div class="header-contact">
-        <p>Telegram: <a href="https://t.me/TopRenovierung-Kaufbeuren" target="_blank">TopRenovierung-Kaufbeuren</a></p>
-        <p>Email: TopRenovierung-Kaufbeuren@gmx.de</p>
-    </div>
-</header>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы - команда опытных специалистов, занимающихся ремонтом и отделкой квартир. С нами ваш ремонт будет легким и быстрым!</p>
+        </div>
+    </section>
 
-<!-- Секция с услугами -->
-<section id="services">
-    <h2>Unsere Dienstleistungen</h2>
-    <div class="services">
-        <div class="service">
-            <h3>Innenrenovierung</h3>
-            <p>Verleihen Sie Ihrem Zuhause neuen Glanz mit unseren professionellen Innenrenovierungen.</p>
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Косметический ремонт</li>
+                <li>Капитальный ремонт</li>
+                <li>Электромонтажные работы</li>
+                <li>Сантехнические работы</li>
+                <li>Дизайн интерьера</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Портфолио</h2>
             <div class="gallery">
-                <div class="gallery-item">
-                    <img src="https://example.com/innenrenovierung1.jpg" alt="Innenrenovierung 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://example.com/innenrenovierung2.jpg" alt="Innenrenovierung 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://example.com/innenrenovierung3.jpg" alt="Innenrenovierung 3">
-                </div>
+                <img src="img1.jpg" alt="Ремонт квартиры 1">
+                <img src="img2.jpg" alt="Ремонт квартиры 2">
+                <img src="img3.jpg" alt="Ремонт квартиры 3">
             </div>
         </div>
-        <div class="service">
-            <h3>Sanierung von Badezimmern</h3>
-            <p>Erwecken Sie Ihr Badezimmer zu neuem Leben mit unserer maßgeschneiderten Sanierungslösungen.</p>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="https://example.com/badezimmer1.jpg" alt="Badezimmer 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://example.com/badezimmer2.jpg" alt="Badezimmer 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://example.com/badezimmer3.jpg" alt="Badezimmer 3">
-                </div>
-            </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Секция с контактами -->
-<section id="contact" class="contact-info">
-    <h2>Kontaktieren Sie uns</h2>
-    <p>Sie können uns per E-Mail erreichen: <a href="mailto:TopRenovierung-Kaufbeuren@gmx.de">TopRenovierung-Kaufbeuren@gmx.de</a></p>
-</section>
-
-<!-- Подвал -->
-<footer>
-    <
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Фирма по ремонту квартир. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
