@@ -15,43 +15,68 @@
             background-image: url("https://toprenovierung-kaufbeuren.github.io/TopRenovierung-Kaufbeuren-/file-28C6KcDV6QGx2LD9hPcos4.webp");
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: fixed; /* Статичный фон */
             filter: brightness(10%); /* Сделано логотипом более прозрачным */
             color: white; /* Белый цвет текста */
         }
-        header {
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 1; /* Положение поверх фона */
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
+
+        /* Навигация по сайту */
+        nav {
+            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Контакты в шапке */
-        .header-contact {
-            font-size: 1.1em;
-            color: #ff6347; /* Яркий цвет для контактов */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Шапка */
+        header {
+            text-align: center;
+            padding: 120px 20px; /* Отступ для шапки */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: white; /* Ярко белый текст для названия фирмы */
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: white; /* Ярко белый текст для описания */
+        }
+
+        /* Контакты */
+        .header-contact {
+            font-size: 1.2em;
+            color: #ff6347; /* Яркий цвет для контактов */
+            margin-top: 20px;
+        }
+
         .header-contact a {
             color: #ff6347;
             text-decoration: none;
             margin-left: 20px;
         }
+
         .header-contact a:hover {
             text-decoration: underline;
-        }
-        .header-contact p {
-            margin: 0;
         }
 
         /* Секции с контентом */
@@ -61,20 +86,45 @@
             margin: 0 auto;
         }
 
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white; /* Белый текст заголовков */
+        }
+
+        /* Услуги */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            margin-top: 40px;
         }
 
         .service {
             padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для услуг */
+            border-radius: 8px;
             text-align: center;
-            color: white; /* Белый текст для услуг */
-            font-size: 1.2em;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
         }
+
+        .service:hover {
+            transform: translateY(-10px);
+        }
+
         .service h3 {
             margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        /* Галерея */
+        .gallery {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .gallery-item img {
@@ -86,17 +136,17 @@
         /* Контакт */
         .contact-info {
             font-size: 1.2em;
-            color: white; /* Белый текст для контактов */
+            color: white;
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для контактов */
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 40px;
         }
 
         footer {
-            background-color: #ff8f6d; /* Мягкий персиковый */
+            background-color: #ff8f6d;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -108,33 +158,74 @@
             background-color: #f7f7f7;
             padding: 40px 20px;
         }
+
         .testimonial-item {
             text-align: center;
             margin-bottom: 30px;
         }
+
         .testimonial-item p {
             font-size: 1.2em;
             font-style: italic;
         }
+
         .testimonial-item h4 {
             margin-top: 10px;
             font-weight: bold;
         }
+
+        /* Масштабируемая навигация */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .service {
+                padding: 15px;
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+        }
+
     </style>
 </head>
 <body>
 
+<!-- Навигация -->
+<nav>
+    <a href="#services">Leistungen</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#testimonials">Kundenbewertungen</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<!-- Шапка сайта -->
 <header>
-    <div>
-        <h1>TopRenovierung Kaufbeuren</h1>
-        <p>Ihre Experten für Wohnungsrenovierung in Kaufbeuren</p>
-    </div>
+    <h1>TopRenovierung Kaufbeuren</h1>
+    <p>Ihre Experten für Wohnungsrenovierung in Kaufbeuren</p>
     <div class="header-contact">
         <p>Telegram: <a href="https://t.me/TopRenovierung-Kaufbeuren" target="_blank">TopRenovierung-Kaufbeuren</a></p>
         <p>Email: TopRenovierung-Kaufbeuren@gmx.de</p>
     </div>
 </header>
 
+<!-- Секция с услугами -->
 <section id="services">
     <h2>Unsere Dienstleistungen</h2>
     <div class="services">
@@ -142,58 +233,41 @@
             <h3>Innenrenovierung</h3>
             <p>Verleihen Sie Ihrem Zuhause neuen Glanz mit unseren professionellen Innenrenovierungen.</p>
             <div class="gallery">
-                <img src="https://example.com/innenrenovierung1.jpg" alt="Innenrenovierung 1">
-                <img src="https://example.com/innenrenovierung2.jpg" alt="Innenrenovierung 2">
-                <img src="https://example.com/innenrenovierung3.jpg" alt="Innenrenovierung 3">
+                <div class="gallery-item">
+                    <img src="https://example.com/innenrenovierung1.jpg" alt="Innenrenovierung 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://example.com/innenrenovierung2.jpg" alt="Innenrenovierung 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://example.com/innenrenovierung3.jpg" alt="Innenrenovierung 3">
+                </div>
             </div>
         </div>
         <div class="service">
             <h3>Sanierung von Badezimmern</h3>
             <p>Erwecken Sie Ihr Badezimmer zu neuem Leben mit unserer maßgeschneiderten Sanierungslösungen.</p>
             <div class="gallery">
-                <img src="https://example.com/badezimmer1.jpg" alt="Badezimmer 1">
-                <img src="https://example.com/badezimmer2.jpg" alt="Badezimmer 2">
-                <img src="https://example.com/badezimmer3.jpg" alt="Badezimmer 3">
-            </div>
-        </div>
-        <div class="service">
-            <h3>Wand- und Deckenmalerei</h3>
-            <p>Verleihen Sie Ihrem Raum Farbe und Frische durch hochwertige Malerarbeiten.</p>
-            <div class="gallery">
-                <img src="https://example.com/malerarbeiten1.jpg" alt="Malerarbeiten 1">
-                <img src="https://example.com/malerarbeiten2.jpg" alt="Malerarbeiten 2">
-                <img src="https://example.com/malerarbeiten3.jpg" alt="Malerarbeiten 3">
-            </div>
-        </div>
-        <div class="service">
-            <h3>Elektrische Installationen</h3>
-            <p>Unsere Experten bieten moderne und sichere elektrische Installationen für Ihr Zuhause.</p>
-            <div class="gallery">
-                <img src="https://example.com/elektrik1.jpg" alt="Elektrik 1">
-                <img src="https://example.com/elektrik2.jpg" alt="Elektrik 2">
-                <img src="https://example.com/elektrik3.jpg" alt="Elektrik 3">
-            </div>
-        </div>
-        <div class="service">
-            <h3>Überholung nach dem Renovieren</h3>
-            <p>Nach dem Renovierungsprozess kümmern wir uns um die Reinigung und den Zustand Ihres Hauses.</p>
-            <div class="gallery">
-                <img src="https://example.com/cleanup1.jpg" alt="Cleanup 1">
-                <img src="https://example.com/cleanup2.jpg" alt="Cleanup 2">
-                <img src="https://example.com/cleanup3.jpg" alt="Cleanup 3">
+                <div class="gallery-item">
+                    <img src="https://example.com/badezimmer1.jpg" alt="Badezimmer 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://example.com/badezimmer2.jpg" alt="Badezimmer 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://example.com/badezimmer3.jpg" alt="Badezimmer 3">
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Секция с контактами -->
 <section id="contact" class="contact-info">
     <h2>Kontaktieren Sie uns</h2>
     <p>Sie können uns per E-Mail erreichen: <a href="mailto:TopRenovierung-Kaufbeuren@gmx.de">TopRenovierung-Kaufbeuren@gmx.de</a></p>
 </section>
 
+<!-- Подвал -->
 <footer>
-    <p>&copy; 2024 TopRenovierung Kaufbeuren</p>
-</footer>
-
-</body>
-</html>
+    <
